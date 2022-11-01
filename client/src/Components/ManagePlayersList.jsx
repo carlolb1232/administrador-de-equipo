@@ -3,28 +3,24 @@ import { Routes, Route, Outlet, Link } from "react-router-dom";
 import AddPlayer from './ManagePlayerComponents/AddPlayer';
 import PlayersList from './ManagePlayerComponents/PlayersList';
 
-const ManagePlayers = () => {
+const ManagePlayersList = () => {
   return (
-    <div>
+    <div className='component-container'>
       <nav>
         <ul>
           <li>
-            <Link>List |</Link>
+            <Link to='/players/list' >List |</Link>
           </li>
           <li>
-            <Link>Add Player</Link>
+            <Link to='/players/add' >Add Player</Link>
           </li>
         </ul>
       </nav>
       <div className="manage-player-content">
-        <Routes>
-          <Route path='/list' element={<PlayersList />}/>
-        </Routes>
-        {/* <PlayersList /> */}
-        {/* <AddPlayer /> */}
+        <PlayersList />
       </div>
     </div>
   );
 }
 
-export default ManagePlayers;
+export default ManagePlayersList;

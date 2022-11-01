@@ -1,6 +1,7 @@
 .App {
   text-align: center;
   background-color: rgb(238,238,238);
+  height: 100vh;
 }
 
 .App-logo {
@@ -17,11 +18,11 @@ li{
   list-style: none;
 }
 a{
-  color: black;
+  font-weight: bold;
 }
 
 .table{
-  width: 80%;
+  /* width: 80%; */
   margin: 0 auto;
 }
 
@@ -29,6 +30,32 @@ a{
   background-color: white;
   width: 60%;
   margin: 0 auto;
+  padding: 30px;
+  border: 3px solid black;
+}
+
+.form-error{
+  padding: 10px 10px;
+}
+
+.component-container{
+  width: 80%;
+  margin: 0 auto;
+}
+
+.button-container{
+  display: flex;
+  justify-content: space-around;
+}
+
+.button-container .btn{
+  border: 2px solid black;
+  box-shadow: 2px 3px 1px 0px black;
+}
+
+.nav-ul{
+  display: flex;
+  justify-content: center;
 }
 
 @media (prefers-reduced-motion: no-preference) {

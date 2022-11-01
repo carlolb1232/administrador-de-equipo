@@ -51,23 +51,23 @@ const PlayerForm = (props) => {
                   />
                   {
                     errors.name && touched.name &&
-                    <div class="alert alert-danger" role="alert">
+                    <div class="form-error alert alert-danger" role="alert">
                       {errors.name}
                     </div>
                   }
                 </div>
                 <div className="form-group">
-                  <label htmlFor="prefered_position" className='form-label'>Player Name: </label>
+                  <label htmlFor="prefered_position" className='form-label'>Prefered Position: </label>
                   <Field 
                     id="prefered_position"
                     type="text"
-                    placeholder="Ingrese un nombre"
+                    placeholder="Ingrese la posición de preferencia"
                     name="prefered_position"
                     className="form-control"
                   />
                   {
                     errors.prefered_position && touched.prefered_position &&
-                    <div class="alert alert-danger" role="alert">
+                    <div class="form-error alert alert-danger" role="alert">
                       {errors.prefered_position}
                     </div>
                   }
