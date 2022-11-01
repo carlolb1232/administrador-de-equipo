@@ -33,9 +33,9 @@ const PlayersList = () => {
     }
   }
 
-  const deleteAction = (id) => {
+  const deleteAction = (id, name) => {
     Swal.fire({
-      title: '¿Esta seguro de eliminar este jugador?',
+      title: `¿Esta seguro de eliminar el jugador: ${name}?`,
       text: "No podra revertir está acción",
       icon: 'warning',
       showCancelButton: true,
@@ -69,7 +69,7 @@ const PlayersList = () => {
               <tr key={player._id}>
                 <td><Link to={`/players/update/${player._id}`}>{player.name}</Link></td>
                 <td>{player.prefered_position}</td>
-                <td><button className='btn btn-danger' onClick={()=>deleteAction(player._id)}>Delete</button></td>
+                <td><button className='btn btn-danger' onClick={()=>deleteAction(player._id, player.name)}>Delete</button></td>
               </tr>
             )
           }
